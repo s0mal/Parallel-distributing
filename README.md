@@ -80,6 +80,86 @@ Demonstrates **threading events** for communication between threads:
 Shows how to use **thread locks** for synchronization in multithreading:
 - Locks prevent race conditions by ensuring only one thread can access a shared resource at a time.
 
+---
+
+## Chapter 3: Process Management and Communication
+
+This chapter explores various concepts and Python implementations related to process management, interprocess communication (IPC), and process synchronization. It covers examples that demonstrate how processes communicate using pipes, queues, and barriers, as well as handling processes in the background, killing processes, and managing process pools.
+
+### 1. **communicating_with_pipe.py**
+This script demonstrates interprocess communication using pipes to send data between processes.
+
+### 2. **communicating_with_queue.py**
+Demonstrates interprocess communication using queues to exchange data between processes.
+
+### 3. **derom.py**
+Implements a simple program related to process communication or management.
+
+### 4. **killing_processes.py**
+Demonstrates how to terminate running processes using Python.
+
+### 5. **myFunc.py**
+Defines a function or process-related code to be executed by processes.
+
+### 6. **naming_processes.py**
+Demonstrates the naming of processes and how to retrieve process names.
+
+### 7. **process_in_subclass.py**
+Shows how to subclass the Process class to create custom process implementations.
+
+### 8. **process_pool.py**
+Implements a process pool for concurrent execution of tasks using the Pool class.
+
+### 9. **processes_barrier.py**
+Demonstrates how to use barriers to synchronize processes and ensure they proceed together.
+
+### 10. **run_background_processes.py**
+Demonstrates how to run processes in the background.
+
+### 11. **run_background_processes_no_daemons.py**
+Shows how to run background processes that are not daemonized, meaning they do not exit when the main program ends.
+
+### 12. **spawning_processes.py**
+Demonstrates how to spawn new processes and manage their execution.
+
+### 13. **spawning_processes_namespace.py**
+Demonstrates how to use multiprocessing with a namespace to share data between processes.
+
+---
+
+## Chapter 4: Message Passing
+
+This chapter focuses on demonstrating message-passing techniques using **MPI (Message Passing Interface)** with the **mpi4py** library in Python. The examples in this chapter showcase how to manage communication between multiple processes in a parallel computing environment. Key concepts include sending and receiving data between processes, using collective communication, and understanding Cartesian topology for process communication.
+
+### 1. **basic_mpi_example.py**
+This script demonstrates basic **MPI** communication using the **mpi4py** library.
+
+### 2. **collective_communication.py**
+This example illustrates the use of **collective communication** in MPI, using the `gather` function to collect data from all processes and send it to the root process.
+
+### 3. **cartesian_topology_example.py**
+This script demonstrates the use of **Cartesian topology** for process communication in a 2D grid using MPI’s `Create_cart` method.
+
+---
+
+## Chapter 5: Asynchronous Programming in Python
+
+This chapter contains multiple examples of asynchronous programming in Python using the `asyncio` module. The examples showcase how to manage event loops, run multiple coroutines, use `asyncio.Future` for coordination between tasks, and simulate a finite state machine. These examples help in understanding the concept of asynchronous programming and its application in real-world problems.
+
+### 1. **Managing Event Loop**
+In this example, we demonstrate how to create an event loop that schedules tasks (`task_A`, `task_B`, and `task_C`) to run at specified times.
+
+### 2. **Running Multiple Coroutines**
+This example shows how to run multiple coroutines concurrently using `asyncio.create_task` and `asyncio.gather`.
+
+### 3. **Using asyncio.Future for Two Coroutines**
+This example demonstrates the use of `asyncio.Future` to coordinate two coroutines and retrieve their results once both tasks are completed.
+
+### 4. **Finite State Machine Simulation**
+In this example, we simulate a finite state machine using `asyncio`, where the system transitions between different states based on input values.
+
+---
+
 ## Requirements
 
 To run these scripts, you need Python 3.x and some external libraries:
@@ -87,6 +167,7 @@ To run these scripts, you need Python 3.x and some external libraries:
 - `numba` and `numpy` for GPU computing examples
 - `concurrent.futures` for ThreadPoolExecutor
 - `multiprocessing` and `threading` for concurrent and parallel programming examples
+- `asyncio` for asynchronous programming examples
 
 You can install the required libraries using:
 
